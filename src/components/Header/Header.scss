@@ -1,0 +1,30 @@
+.header {
+  height: 60px;
+  background-color: rgb(44, 202, 148);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  &__title h1 {
+    color: white;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    & img {
+      width: 15px;
+      margin-right: 5px;
+    }
+    & input {
+      width: 80%;
+      height: 25px;
+      border: 1px solid rgb(40, 182, 132);
+      border-radius: 10px;
+      outline: none;
+    }
+  }
+}
