@@ -10,16 +10,19 @@ import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import heart_outline from "../../assets/icons/heart_outline.svg";
 
 import "./TableRowComponent.scss";
 
 const TableRowComponent = ({
+  id,
   rank,
   symbol,
   name,
   priceUsd,
   marketCapUsd,
   changePercent24Hr,
+  handleClick,
 }) => {
   const [open, setOpen] = React.useState(false);
 
@@ -44,13 +47,18 @@ const TableRowComponent = ({
             alt={name}
           />
         </TableCell>
-        <TableCell align="left">
+        <TableCell align="left" id="coin-name">
           {name}
           <br />
           {symbol}
         </TableCell>
         <TableCell align="left">
-          ${Number(priceUsd).toFixed(4)}... USD
+          ${Number(priceUsd).toFixed(3)}... USD
+        </TableCell>
+        <TableCell align="center" className="like" id="add-favorite">
+          <button type="button" onClick={() => handleClick()}>
+            <img src={heart_outline} alt="heart" />
+          </button>
         </TableCell>
       </TableRow>
       <TableRow>

@@ -46,6 +46,7 @@ const TableComponent = ({ children }) => {
             <TableCell className={classes.cell} align="left">
               Price
             </TableCell>
+            <TableCell className={classes.cell} align="left"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>{children}</TableBody>
